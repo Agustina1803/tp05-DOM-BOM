@@ -17,7 +17,7 @@
     <header>
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand a-font" href="./index.html">
+          <a class="navbar-brand a-font" href="../index.html">
             <i class="bi bi-archive-fill"></i> Tp5- DOM&BOM
           </a>
         </div>
@@ -27,11 +27,12 @@
       <div class="card">
         <div class="card-body text-center">
           <button class="btn btn-primary">Comenzar juego!</button>
+          <p id="p-juego"class="d-none mt-2">Juego comenzado!</p>
           <form id="formNumero" class="mt-3">
             <label for="numero" class="form-label"
               >Ingresa el número del 1 al 10 para jugar:</label
             >
-            <input type="text" id="numero" class="form-control" required />
+            <input type="text" id="numero" class="form-control"/>
             <button type="submit" class="btn btn-success mt-2">Enviar</button>
           </form>
         </div>
