@@ -9,12 +9,12 @@
     />
     <meta name="author" content="Bulacio Agustina" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/pageEj2.css" />
     <title>Genereaciones</title>
   </head>
   <body>
-        <header>
+    <header>
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand a-font" href="./index.html">
@@ -28,68 +28,50 @@
         <h1 class="text-center">Crear persona</h1>
       </section>
       <section class="container mb-4">
-            <form autocomplete="off">
-              <div class="my-2">
-                <label for="inputNombre" class="form-label">Nombre:</label>
-                <input
-                  type="text"
-                  id="inputNombre"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="my-2">
-                <label for="inputEdad" class="form-label">Edad:</label>
-                <input
-                  type="text"
-                  id="inputEdad"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="my-2">
-                <label for="inputDNI" class="form-label">DNI:</label>
-                <input
-                  type="text"
-                  id="inputDNI"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="my-2">
-                <label for="inputSexo" class="form-label">Sexo:</label>
-                <select name="sexo" id="sexo" class="form-select" required>
-                  <option value="" disabled selected>
-                    Seleccioná una opcion
-                  </option>
-                  <option value="H">H</option>
-                  <option value="M">M</option>
-                </select>
-              </div>
-              <div class="my-2">
-                <label for="inputPeso" class="form-label">Peso:</label>
-                <input
-                  type="text"
-                  id="inputPeso"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="my-2">
-                <label for="inputAnioNac" class="form-label"
-                  >Año de nacimiento:
-                </label>
-                <input
-                  type="text"
-                  id="inputAnioNac"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <button type="submit" class="btn btn-primary w-100 mt-2">
-                Crear persona
-              </button>
-            </form>
+        <form id="formPersona" autocomplete="off">
+          <div class="my-2">
+            <label for="inputNombre" class="form-label">Nombre:</label>
+            <input type="text" id="inputNombre" class="form-control" required />
+          </div>
+          <div class="my-2">
+            <label for="inputEdad" class="form-label">Edad:</label>
+            <input type="text" id="inputEdad" class="form-control" required />
+          </div>
+          <div class="my-2">
+            <label for="inputDNI" class="form-label">DNI:</label>
+            <input type="text" id="inputDNI" class="form-control" required />
+          </div>
+          <div class="my-2">
+            <label for="inputSexo" class="form-label">Sexo:</label>
+            <select name="sexo" id="sexo" class="form-select" required>
+              <option value="" disabled selected>Seleccioná una opcion</option>
+              <option value="H">H</option>
+              <option value="M">M</option>
+            </select>
+          </div>
+          <div class="my-2">
+            <label for="inputPeso" class="form-label">Peso:</label>
+            <input type="text" id="inputPeso" class="form-control" required />
+          </div>
+          <div class="my-2">
+            <label for="inputAltura" class="form-label">Altura:</label>
+            <input type="text" id="inputAltura" class="form-control" required />
+          </div>
+          <div class="my-2">
+            <label for="inputAnioNac" class="form-label"
+              >Año de nacimiento:
+            </label>
+            <input
+              type="text"
+              id="inputAnioNac"
+              class="form-control"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mt-2">
+            Crear persona
+          </button>
+        </form>
       </section>
       <section class="container mb-4">
         <div class="row justify-content-center">
@@ -110,14 +92,133 @@
           </div>
         </div>
       </section>
-         <div class="text-center my-4">
+      <div class="text-center my-4">
         <a href="../index.html" class="btn btn-outline-light">Volver</a>
       </div>
+      <section>
+        <div
+          class="modal fade"
+          id="modalGeneracion"
+          tabindex="-1"
+          aria-labelledby="tituloGeneracion"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+              <div class="modal-header">
+                <h5 class="modal-title" id="tituloGeneracion">Generación</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Cerrar"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title text-center" id="nombreGeneracion">
+                      Generación de
+                    </h5>
+                    <p class="card-text" id="textoGeneracion">
+                      Nombre de la generación:
+                    </p>
+                    <p class="card-text" id="textoRasgo">
+                      Rasgo característico:
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+       <section>
+        <div
+          class="modal fade"
+          id="modalEdad"
+          tabindex="-1"
+          aria-labelledby="tituloEdad"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+              <div class="modal-header">
+                <h5 class="modal-title" id="tituloEdad">Evaluacion de la edad</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Cerrar"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="card">
+                  <p id="mensajeEdad"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+       <section>
+        <div
+          class="modal fade"
+          id="modalDatos"
+          tabindex="-1"
+          aria-labelledby="tituloDatos"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+              <div class="modal-header">
+                <h5 class="modal-title" id="tituloGeneracion">Datos de la persona</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Cerrar"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-text" id="textoNombre">
+                     
+                    </p>
+                    <p class="card-text" id="textoEdad">
+                      
+                    </p>
+                     <p class="card-text" id="textoDNI">
+                     
+                    </p>
+                     <p class="card-text" id="textoSexo">
+                     
+                    </p>
+                     <p class="card-text" id="textoAltura">
+                      
+                    </p>
+                     <p class="card-text" id="textoPeso">
+                      
+                    </p>
+                     <p class="card-text" id="textoAnioNac">
+                     
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="text-center py-3 bg-dark-subtle">
       <p>&copy; Todos los derechos reservados &copy;</p>
     </footer>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/app.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/pageEj2.js"></script>
   </body>
 </html>
