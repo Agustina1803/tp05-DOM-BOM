@@ -1,7 +1,7 @@
 const crearTarea = (e) => {
   e.preventDefault();
   const textoTarea = input.value.trim();
-  if (textoTarea === "") return;
+  
 
   const li = document.createElement("li");
   const divContenido = document.createElement("div");
