@@ -29,104 +29,32 @@
         </div>
       </nav>
     </header>
-    <main class="d-flex justify-content-center align-items-center">
-      <section class="container my-4">
-        <div class="card card-border">
-          <div class="card-body">
-            <div>
-              <h1>
-                Lista de tareas
-                <img
-                  src="../assets/img/education.png"
-                  alt="pila de libros"
-                  class="img-titulo"
-                />
-              </h1>
-            </div>
-            <div>
-              <button
-                class="btn-add"
-                data-bs-toggle="modal"
-                data-bs-target=".modal"
-              >
-                <i class="bi bi-plus-square"></i> Agregar Tarea
-              </button>
-            </div>
-            <div class="d-none">
-              <ul class="list-group">
-                <li
-                  class="list-group-item d-flex justify-content-between align-items-center text-light my-3"
-                >
-                  <div class="d-flex align-items-center">
-                    <input
-                      class="form-check-input me-2"
-                      type="checkbox"
-                      id="firstCheckbox"
-                    />
-                    <label class="form-check-label mb-0" for="firstCheckbox">
-                      Texto de la tarea
-                    </label>
-                  </div>
-                  <button type="button" class="btn btn-danger btn-sm">
-                    <i class="bi bi-trash3-fill"></i>
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <main>
+      <h1>
+        Lista de tareas
+        <img
+          src="../assets/img/education.png"
+          alt="pila de libros"
+          class="img-titulo"
+        />
+      </h1>
+      <article>
+        <div class="bg-dark-subtle p-4 rounded-3 my-4">
+          <form id="formTarea">
+            <label for="tarea">Ingrese una tarea:</label>
+            <input type="text" id="tarea" class="form-control" />
+            <button type="submit" class="btn btn-success mt-2">Enviar</button>
+          </form>
         </div>
-      </section>
-      <section>
-        <div class="modal" tabindex="-1">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Agregar Tarea</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <form action="">
-                  <div class="my-2">
-                    <label for="nombreTarea" class="form-label">Nombre de tarea:</label>
-                    <input
-                      type="text"
-                      id="inputNombre"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label for="" class="my-2"> Descripcion: </label>
-                    <textarea
-                      id="textareaDescripcion"
-                      class="form-control"
-                      rows="5"
-                      required
-                      minlength="30"
-                      maxlength="250"
-                    ></textarea>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  data-bs-dismiss="modal"
-                >
-                  Agregar tarea
-                </button>
-                <button type="button" class="btn btn-danger">Cerrar</button>
-              </div>
-            </div>
-          </div>
+        <ul id="listaTareas" class="list-group">
+
+        </ul>
+        <div class="row row-gap-3">
+       <!--<button type="button" class="btn btn-danger btn-sm">
+            <i class="bi bi-trash3-fill"></i>
+          </button>--> 
         </div>
-      </section>
+      </article>
     </main>
     <footer class="text-center py-2 bg-body-tertiary">
       <p>&copy; Todos los derechos reservados &copy;</p>
