@@ -1,0 +1,34 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.a-font{
+  font-size: 15px;
+  color: rgb(220, 20, 60);
+}
+
+
+.card {
+  background-color: #17202a;
+}
+
+
+
+.estiloFecha-Hora {
+  font-size: 32px;
+  color: #20b2aa;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+.bg-dark-transparente {
+  background-color: rgba(23, 32, 42, 0.8); 
+}
