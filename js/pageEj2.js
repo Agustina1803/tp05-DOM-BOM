@@ -218,7 +218,7 @@ const esMayorDeEdad = () =>{
 }
 
 const mostrarDatosPersona = () =>{
-    personaCreada. mostrarDatos();
+    personaCreada.mostrarDatos();
 }
 
 const formularioPersona = document.querySelector("#formPersona");
